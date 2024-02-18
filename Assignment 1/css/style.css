@@ -2,24 +2,25 @@
     margin: 0;
 }
 @font-face {
-    font-family:Protest;
-    src: url(../fonts/Protest_Guerrilla/ProtestGuerrilla-Regular.ttf);
+    font-family:Satisfy;
+    src: url(../fonts/Satisfy/Satisfy/Satisfy-Regular.ttf);
     
   }
   p{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
 .title
-{
+{   
     text-align: center;
-    font-family:Protest;
+    font-family:Satisfy;
     letter-spacing: 0.125em;
-    font-size: 1.875em;
+    font-size: 2em;
 }
 
 .sub-title{
     text-align: center;
     font-family: serif;
+    
 }
 h1,h2,h3,h4{
     margin: 1.25em 0;
@@ -27,6 +28,18 @@ h1,h2,h3,h4{
 .sub-heading{
     font-family:serif;
     font-size: 1.5625em;
+    background-color: #222629;
+    border-top-right-radius: 1.25em;
+    color: white;
+    padding-left: 0.5em;
+    box-shadow:0.39em 0.125em 0.8125em 0.3em gray;
+}
+.sub-heading-2{
+   
+   
+    background-color: white;
+    border-top-right-radius: 1.25em;
+    color:#222629;
 }
 .my-cv{
     background-color: #fff;
