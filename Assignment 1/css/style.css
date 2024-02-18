@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+}
+@font-face {
+    font-family:Protest;
+    src: url(../fonts/Protest_Guerrilla/ProtestGuerrilla-Regular.ttf);
+    
+  }
+  p{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+.title
+{
+    text-align: center;
+    font-family:Protest;
+    letter-spacing: 0.125em;
+    font-size: 1.875em;
+}
+
+.sub-title{
+    text-align: center;
+    font-family: serif;
+}
+h1,h2,h3,h4{
+    margin: 1.25em 0;
+}
+.sub-heading{
+    font-family:serif;
+    font-size: 1.5625em;
+}
+.my-cv{
+    background-color: #fff;
+}
+.cv-container{
+    max-width: 45.25em;
+    margin: auto;
+    padding: 2.5em;
+}
+.cv-row{
+    display: flex;
+}
+.col-6{
+    padding: 1.25em;
+}
+.cv-img {
+    max-width: 100%;
+    width: 17.8125em;
+    height: 13.8125em;
+    object-fit: cover;
+    border-top-right-radius: 14.625em;
+    box-shadow:0.39em 0.125em 0.8125em 0.3em gray;
+}
+.bg-black{
+    background: #222629;
+    color: #fff;
+    border-radius: 1.25em;
+}
+progress {
+    width: 15.625em;
+    height : 0.75em;
+    border: 0.125em solid gray;
+    border-radius: 1.25em;
+ }
+ progress::-webkit-progress-bar {
+    border-radius: 1.25em;
+    background-color: black;
+ }
+ progress::-webkit-progress-value {
+    background-color: gray;
+    border-radius: 1.25em;
+ }
+ #phone {
+    list-style-type: none;
+   
+   
+  }
+  #phone li img {
+    width: 1.25em;
+    height: auto; 
+    margin-right: 0.625em; 
+  }
