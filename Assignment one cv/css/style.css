@@ -15,6 +15,7 @@
     font-family:Satisfy;
     letter-spacing: 0.125em;
     font-size: 2em;
+    
 }
 
 .sub-title{
@@ -33,12 +34,16 @@ h1,h2,h3,h4{
     color: white;
     padding-left: 0.5em;
     box-shadow: 0.39em 0.125em 0.8125em 0.3em gray;
+
+ 
 }
 
 .sub-heading-2 {
     background-color: white;
     border-top-right-radius: 1.25em;
     color: #222629;
+   
+
 }
 
 .my-cv{
@@ -83,36 +88,23 @@ h1,h2,h3,h4{
     height: auto; 
     margin-right: 0.625em; 
   }
-  .progress-container {
-    width: 80%;
-    max-width: 15.625em;
+ 
+
+  progress {
+    width: 100%; 
     height: 0.75em;
+    border: 0.125em solid gray;
     border-radius: 1.25em;
-    overflow: hidden;
+}
+
+progress::-webkit-progress-bar {
+    border-radius: 1.25em;
     background-color: black;
-    margin: 0 auto;
 }
 
-.progress-bar {
-    width: 80%;
-    height: 0.75em;
-    background-color: gray;
+progress::-webkit-progress-value {
+    background: linear-gradient(#fff8, #fff0),
+    repeating-linear-gradient(135deg, gray 0 10px, #0000 0 20px),
+    black;
     border-radius: 1.25em;
-    margin: 0;
-}
-
-.progress-bar-2 {
-    width: 70%;
-}
-
-.progress-bar-3 {
-    width: 70%;
-}
-
-.progress-bar-4 {
-    width: 75%;
-}
-
-.progress-bar-5 {
-    width: 70%;
 }
