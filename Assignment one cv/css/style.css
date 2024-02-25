@@ -25,22 +25,22 @@
 h1,h2,h3,h4{
     margin: 1.25em 0;
 }
-.sub-heading{
-    font-family:serif;
-    font-size: 1.5625em;
+.sub-heading {
+    font-family: serif;
+    font-size: 3vw; 
     background-color: #222629;
     border-top-right-radius: 1.25em;
     color: white;
     padding-left: 0.5em;
-    box-shadow:0.39em 0.125em 0.8125em 0.3em gray;
+    box-shadow: 0.39em 0.125em 0.8125em 0.3em gray;
 }
-.sub-heading-2{
-   
-   
+
+.sub-heading-2 {
     background-color: white;
     border-top-right-radius: 1.25em;
-    color:#222629;
+    color: #222629;
 }
+
 .my-cv{
     background-color: #fff;
 }
@@ -50,10 +50,14 @@ h1,h2,h3,h4{
     padding: 2.5em;
 }
 .cv-row{
-    display: flex;
+    overflow: hidden;
+  
 }
 .col-6{
+    float: left;
     padding: 1.25em;
+    width: 50%;
+    box-sizing: border-box;
 }
 .cv-img {
     max-width: 100%;
@@ -80,31 +84,35 @@ h1,h2,h3,h4{
     margin-right: 0.625em; 
   }
   .progress-container {
-    width: 15.625em;
-    height : 0.75em;
-   
+    width: 80%;
+    max-width: 15.625em;
+    height: 0.75em;
     border-radius: 1.25em;
     overflow: hidden;
     background-color: black;
+    margin: 0 auto;
 }
 
 .progress-bar {
-    width: 13em;
-    height : 0.75em;
+    width: 80%;
+    height: 0.75em;
     background-color: gray;
     border-radius: 1.25em;
-   
-    
+    margin: 0;
 }
-.progress-bar-2{
-    width: 13.63em;
+
+.progress-bar-2 {
+    width: 70%;
 }
-.progress-bar-3{
-    width: 12.63em;
+
+.progress-bar-3 {
+    width: 70%;
 }
-.progress-bar-4{
-    width: 14.63em;
+
+.progress-bar-4 {
+    width: 75%;
 }
-.progress-bar-5{
-    width: 13.63em;
+
+.progress-bar-5 {
+    width: 70%;
 }
