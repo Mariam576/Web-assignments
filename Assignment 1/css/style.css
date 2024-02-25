@@ -68,20 +68,7 @@ h1,h2,h3,h4{
     color: #fff;
     border-radius: 1.25em;
 }
-progress {
-    width: 15.625em;
-    height : 0.75em;
-    border: 0.125em solid gray;
-    border-radius: 1.25em;
- }
- progress::-webkit-progress-bar {
-    border-radius: 1.25em;
-    background-color: black;
- }
- progress::-webkit-progress-value {
-    background-color: gray;
-    border-radius: 1.25em;
- }
+
  #phone {
     list-style-type: none;
    
@@ -92,3 +79,32 @@ progress {
     height: auto; 
     margin-right: 0.625em; 
   }
+  .progress-container {
+    width: 15.625em;
+    height : 0.75em;
+   
+    border-radius: 1.25em;
+    overflow: hidden;
+    background-color: black;
+}
+
+.progress-bar {
+    width: 13em;
+    height : 0.75em;
+    background-color: gray;
+    border-radius: 1.25em;
+   
+    
+}
+.progress-bar-2{
+    width: 13.63em;
+}
+.progress-bar-3{
+    width: 12.63em;
+}
+.progress-bar-4{
+    width: 14.63em;
+}
+.progress-bar-5{
+    width: 13.63em;
+}
