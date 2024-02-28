@@ -1,0 +1,73 @@
+body{
+  background-color:#1e1433;
+}
+
+
+
+
+.logo{
+  height: 50px;
+}
+.bg-dark{
+  background-image: linear-gradient(180deg,#1c1c1c,#1c1b1b 42.69%,#161616);
+}
+.bg-dark-2{
+  background-color:#1e1433;
+}
+
+.form-control{
+  border-radius: 20px;
+}
+.form-inline{
+  border-radius: 20px;
+  background-color: antiquewhite;
+}
+.form-control {
+    border: 0px solid #ced4da;
+
+}
+.btn:focus{
+  outline: 0;
+  box-shadow:none;
+ 
+}
+.login{
+  height: 50px;
+  width: 30px;
+}
+.border1{
+  border-left: 2px solid white;
+  padding-left: 20px;
+}
+.mx-auto.margin-set{
+
+  margin-right: 20px !important;
+}
+.navbar-nav{
+  gap: 150px;
+}
+.border2{
+  border-radius: 10px;
+  height: 332px;
+}
+.carousel-section {
+  margin-top: 150px;
+}
+.carousel-indicators{
+  bottom: -44px;
+}
+
+.image-height-2{
+  border-radius: 20px;
+  height: 253px;
+  object-fit: cover;
+  
+}
+.image-height{
+  border-radius: 20px;
+  height: 150px;
+  
+}
+.card-height{
+  height: 450px;
+}
