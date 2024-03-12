@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Contact Us</title>
+    
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style2.css">
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function handleFormSubmission(event) {
+        console.log("inside handleFormSubmission");
+
+        let firstName = $("#firstName").val();
+        let lastName = $("#lastName").val();
+        let email = $("#email").val();
+        let message = $("#message").val();
+        let errorFlag = false;
+
+        
+        $(".form-control").removeClass("error");
+
+        if (!firstName) {
+          $("#firstName").addClass("error");
+          errorFlag = true;
+        }
+
+        if (!lastName) {
+          $("#lastName").addClass("error");
+          errorFlag = true;
+        }
+
+        if (!email) {
+          $("#email").addClass("error");
+          errorFlag = true;
+        }
+
+        if (!message) {
+          $("#message").addClass("error");
+          errorFlag = true;
+        }
+
+        if (errorFlag) {
+          console.log("Form has errors");
+        } else {
+          console.log("Form is valid");
+        }
+      }
+
+      function doBindings() {
+        $("#submitBtn").on("click", handleFormSubmission);
+      }
+
+      $(doBindings);
+    </script>
+  </head>
+
+  <body>
+    <div class="background-image">
+      <div class="contact-heading">
+        <h2>Contact Us</h2>
+      </div>
+    </div>
+    <h4 class="text-center mt-5 mb-4">Let's Start A Conversation</h4>
+    <div class="row">
+    <div class="col-md-6 ml-5">
+      <p>
+        Have questions, feedback, or just want to get in touch? We'd love to
+        hear from you! Feel free to reach out using the form.
+      </p>
+      <img class="img-2" src="./images/headsets-1971383_1920.jpg">
+    </div>
+
+    <div class=" col-md-6 form-container  ml-5">
+      <form>
+        <div class="form-group">
+          <label for="firstName">First Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="firstName"
+            placeholder="Enter your First name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="lastName">Last Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="lastName"
+            placeholder="Enter your Last name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea
+            class="form-control"
+            id="message"
+            rows="4"
+            placeholder="Enter your message"
+            required
+          ></textarea>
+        </div>
+        <input id="submitBtn" type="submit" />
+      </form>
+    </div>
+  </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>

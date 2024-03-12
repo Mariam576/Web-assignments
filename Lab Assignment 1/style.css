@@ -1,73 +1,118 @@
-body{
-  background-color:#1e1433;
+body {
+  background-color: #1e1433;
 }
 
-
-
-
-.logo{
+.logo {
   height: 50px;
 }
-.bg-dark{
-  background-image: linear-gradient(180deg,#1c1c1c,#1c1b1b 42.69%,#161616);
+.bg-dark {
+  background-image: linear-gradient(180deg, #1c1c1c, #1c1b1b 42.69%, #161616);
 }
-.bg-dark-2{
-  background-color:#1e1433;
+.bg-dark-2 {
+  background-color: #1e1433;
 }
 
-.form-control{
+.form-control {
   border-radius: 20px;
 }
-.form-inline{
+.form-inline {
   border-radius: 20px;
   background-color: antiquewhite;
 }
 .form-control {
-    border: 0px solid #ced4da;
-
+  border: 0px solid #ced4da;
 }
-.btn:focus{
+.btn:focus {
   outline: 0;
-  box-shadow:none;
- 
+  box-shadow: none;
 }
-.login{
+.login {
   height: 50px;
   width: 30px;
 }
-.border1{
+.border1 {
   border-left: 2px solid white;
   padding-left: 20px;
 }
-.mx-auto.margin-set{
-
+.mx-auto.margin-set {
   margin-right: 20px !important;
 }
-.navbar-nav{
+.navbar-nav {
   gap: 150px;
 }
-.border2{
+.border2 {
   border-radius: 10px;
   height: 332px;
 }
 .carousel-section {
   margin-top: 150px;
 }
-.carousel-indicators{
+.carousel-indicators {
   bottom: -44px;
 }
 
-.image-height-2{
+.image-height-2 {
   border-radius: 20px;
   height: 253px;
   object-fit: cover;
-  
 }
-.image-height{
+.image-height {
   border-radius: 20px;
   height: 150px;
-  
 }
-.card-height{
+.card-height {
   height: 450px;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.background-image {
+  background-image: url("./images/girl-1990347_1920.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.contact-heading {
+  background: transparent;
+  padding: 20px;
+  border-radius: 10px;
+  width: 40%;
+  text-align: center;
+  margin-right: 10%;
+}
+
+.form-container {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 400px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+.form-control {
+  transition: border-color 0.3s ease-in-out;
+  border-radius: 20px;
+  border-color: blueviolet;
+}
+
+.error {
+  border: 2px solid red !important;
+}
+.img-2 {
+  width: 600px;
+  border-radius: 20px;
 }
