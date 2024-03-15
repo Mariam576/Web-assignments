@@ -15,63 +15,88 @@
 </head>
 <body>
    <header class="fixed-top">
-         <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark ">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
         <div class="container">
-            <a class="navbar-brand mx-auto text-light" href="#"><img class="logo" src="images/transparent_2024-02-28T13-19-31.png">Saggitarius</a>
-            <!-- Search Bar -->
-            <form class="form-inline mx-auto">
-                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn " type="submit"><img src="images/Untitled-1.svg"></button>
-            </form>
-            <a class="nav-item mx-auto text-light margin-set" href="contactUs.html">Contact Us</a>
-            <a class="nav-item  text-light border1" href="crud.html"><img class="login" src="images/Untitled-2.svg">Log In</a>
            
+            <button class="navbar-toggler text-white" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Logo -->
+            <a class="navbar-brand mx-auto text-light mr-auto" href="#">
+                <img class="logo-img" src="images/transparent_2024-02-28T13-19-31.png" alt="Logo"> Saggitarius
+            </a>
+    
+          
+    
+           
+    
+   <!-- Search Form -->
+<form class="form-inline my-2 my-lg-0">
+    <div class="input-group">
+        <input class="form-control form-control-sm mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <div class="input-group-append">
+            <button class="btn btn-sm  my-sm-0" type="submit">
+                <img src="images/Untitled-1.svg" alt="Search">
+            </button>
         </div>
+    </div>
+</form>
+
+
+
+                <!-- Contact Us -->
+                <a class="nav-link text-light" href="contactUs.html">Contact Us</a>
+                
+                <!-- Login -->
+                <a class="nav-link text-light border1" href="crud.html">
+                    <img class="login" src="images/Untitled-2.svg" alt="Login"> Log In
+                </a>
+           
     </nav>
+    
 
     <!-- Navigation Items Container -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark  ">
-    <div class="container">
-        <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link  text-light " href="#">All <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link  text-light " href="#">Trending Now</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link  text-light " href="#">Old Songs</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-light" href="#" id="moodsGenreDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Moods&Genre
-                </a>
-                <div class="dropdown-menu bg-dark " aria-labelledby="moodsGenreDropdown">
-                  
-                    <a class="dropdown-item text-light" href="#">Happy</a>
-                    <a class="dropdown-item text-light" href="#">Sad</a>
-                    <a class="dropdown-item text-light" href="#">Excited</a>
-                   
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-light" href="#" id="topPlaylistsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Top Playlists
-                </a>
-                <div class="dropdown-menu bg-dark " aria-labelledby="topPlaylistsDropdown">
-                 
-                    <a class="dropdown-item text-light" href="#">Pop Hits</a>
-                    <a class="dropdown-item text-light" href="#">Rock Classics</a>
-                    <a class="dropdown-item text-light" href="#">Hip-Hop Vibes</a>
-                   
-                </div>
-            </li>
-
-        </ul>
-    </div>
-</nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <div class="container">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link text-light" href="#">All <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#">Trending Now</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#">Old Songs</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-light" href="#" id="moodsGenreDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Moods&Genre
+                        </a>
+                        <div class="dropdown-menu bg-dark" aria-labelledby="moodsGenreDropdown">
+                            <a class="dropdown-item text-light" href="#">Happy</a>
+                            <a class="dropdown-item text-light" href="#">Sad</a>
+                            <a class="dropdown-item text-light" href="#">Excited</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-light" href="#" id="topPlaylistsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Top Playlists
+                        </a>
+                        <div class="dropdown-menu bg-dark" aria-labelledby="topPlaylistsDropdown">
+                            <a class="dropdown-item text-light" href="#">Pop Hits</a>
+                            <a class="dropdown-item text-light" href="#">Rock Classics</a>
+                            <a class="dropdown-item text-light" href="#">Hip-Hop Vibes</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 </header>
+
 <section class="carousel-section ">
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
@@ -82,10 +107,10 @@
     <div class="carousel-inner">
     <div class="carousel-item active">
         <div class="row ">
-        <div class="col-md-6">
+        <div class="col-md-6 mt-4 ">
             <img src="images/76ea18c77adfaf743c818fe283a8a776.jpg" class="d-block w-100 border2" alt="...">
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 mt-4">
             <img src="images/maxresdefault.jpg" class="d-block w-100 border2" alt="...">
         </div>
     </div>
@@ -93,20 +118,20 @@
 
     <div class="carousel-item">
         <div class="row ">
-        <div class="col-md-6">
+        <div class="col-md-6 mt-4">
            <img src="images/BANNER_206771117875970.webp" class="d-block w-100 border2" alt="...">
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 mt-4">
             <img src="images/293506.jpg" class="d-block w-100 border2" alt="...">
         </div>
     </div>
 </div>
     <div class="carousel-item">
         <div class="row ">
-            <div class="col-md-6">
+            <div class="col-md-6 mt-4">
                <img src="images/composi-o-de-n-do-t-tulo-bollywood-texto-ilustra-vetor-incandesc-ncia-com-quadro-da-l-mpada-indicador-digital-brilhante-para-145785941.webp" class="d-block w-100 border2" alt="...">
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 mt-4">
                 <img src="images/maxresdefault (1).jpg" class="d-block w-100 border2" alt="...">
             </div>
         </div>
@@ -129,7 +154,7 @@
     <div class="container">
         <h3 class=" mb-4">Hindi Top 9</h3>
         <div class="row">
-            <div class="col-md-4 mb-4 ">
+            <div class="col-md-4 mb-4 col-sm-6 ">
                 <div class="card bg-dark-2 card-height  ">
                     <img src="images/phle b main.jpg" class="card-img-top image-height-2" alt="Music Image 1">
                     <div class="card-body">
@@ -140,7 +165,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-4 ">
+            <div class="col-md-4 mb-4 col-sm-6">
                 <div class="card bg-dark-2 card-height ">
                     <img src="images/400x400cc.jpg" class="card-img-top image-height-2" alt="Music Image 2">
                     <div class="card-body">
@@ -150,7 +175,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-4  ">
+            <div class="col-md-4 mb-4 col-sm-6 ">
                 <div class="card bg-dark-2 card-height">
                     <img src="images/fmj_l.oq1b.1.jpg" class="card-img-top image-height-2" alt="Music Image 3">
                     <div class="card-body">
@@ -160,7 +185,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-4 card-height">
+            <div class="col-md-4 mb-4 card-height col-sm-6">
                 <div class="card bg-dark-2">
                     <img src="images/heeriye.jpg" class="card-img-top image-height-2" alt="Music Image 4">
                     <div class="card-body">
@@ -171,7 +196,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-4 card-height">
+            <div class="col-md-4 mb-4 card-height col-sm-6">
                 <div class="card bg-dark-2">
                     <img src="images/tum hi ho.jpg" class="card-img-top image-height-2" alt="Music Image 5">
                     <div class="card-body">
@@ -181,7 +206,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-4 card-height">
+            <div class="col-md-4 mb-4 card-height col-sm-6">
                 <div class="card bg-dark-2">
                     <img src="images/rataan.jpg" class="card-img-top image-height-2" alt="Music Image 6">
                     <div class="card-body">
@@ -191,7 +216,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-4 card-height">
+            <div class="col-md-4 mb-4 card-height col-sm-6">
                 <div class="card bg-dark-2">
                     <img src="images/ve kmleya.jpg" class="card-img-top image-height-2" alt="Music Image 7">
                     <div class="card-body">
@@ -201,7 +226,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-4 card-height">
+            <div class="col-md-4 mb-4 card-height col-sm-6">
                 <div class="card bg-dark-2">
                     <img src="images/oo mahi.webp" class="card-img-top image-height-2" alt="Music Image 7">
                     <div class="card-body">
@@ -211,7 +236,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-4 card-height">
+            <div class="col-md-4 mb-4 card-height col-sm-6">
                 <div class="card bg-dark-2">
                     <img src="images/chaleya.jpg" class="card-img-top image-height-2" alt="Music Image 7">
                     <div class="card-body">
@@ -240,22 +265,22 @@
     <div class="carousel-inner">
     <div class="carousel-item active">
         <div class="row ">
-        <div class="col-md-2">
+        <div class="col-6 col-sm-4 col-md-2 mt-2">
             <img src="images/genius.jpg" class="d-block w-100 border2 image-height" alt="...">
         </div>
-        <div class="col-md-2">
+        <div class="col-6 col-sm-4 col-md-2 mt-2">
             <img src="images/fantasize.jpg" class="d-block w-100 border2 image-height" alt="...">
         </div>
-        <div class="col-md-2">
+        <div class="col-6 col-sm-4 col-md-2 mt-2">
             <img src="images/untouchable.jpg" class="d-block w-100 border2 image-height" alt="...">
         </div>
-        <div class="col-md-2">
+        <div class="col-6 col-sm-4 col-md-2 mt-2">
             <img src="images/dandelions.jpg" class="d-block w-100 border2 image-height" alt="...">
         </div>
-        <div class="col-md-2">
+        <div class="col-6 col-sm-4 col-md-2 mt-2">
             <img src="images/house of memories.jpg" class="d-block w-100 border2 image-height" alt="...">
         </div>
-        <div class="col-md-2">
+        <div class="col-6 col-sm-4 col-md-2 mt-2">
             <img src="images/until i found you.jpg" class="d-block w-100 border2 image-height" alt="...">
         </div>
     </div>
@@ -263,45 +288,45 @@
 
     <div class="carousel-item">
         <div class="row ">
-            <div class="col-md-2">
-                <img src="images/76ea18c77adfaf743c818fe283a8a776.jpg" class="d-block w-100 border2 image-height" alt="...">
+            <div class="col-6 col-sm-4 col-md-2 mt-2">
+                <img src="images/genius.jpg" class="d-block w-100 border2 image-height" alt="...">
             </div>
-            <div class="col-md-2">
-                <img src="images/maxresdefault.jpg" class="d-block w-100 border2 image-height" alt="...">
+            <div class="col-6 col-sm-4 col-md-2 mt-2">
+                <img src="images/fantasize.jpg" class="d-block w-100 border2 image-height" alt="...">
             </div>
-            <div class="col-md-2">
-                <img src="images/maxresdefault.jpg" class="d-block w-100 border2 image-height" alt="...">
+            <div class="col-6 col-sm-4 col-md-2 mt-2">
+                <img src="images/untouchable.jpg" class="d-block w-100 border2 image-height" alt="...">
             </div>
-            <div class="col-md-2">
-                <img src="images/maxresdefault.jpg" class="d-block w-100 border2 image-height" alt="...">
+            <div class="col-6 col-sm-4 col-md-2 mt-2">
+                <img src="images/dandelions.jpg" class="d-block w-100 border2 image-height" alt="...">
             </div>
-            <div class="col-md-2">
-                <img src="images/maxresdefault.jpg" class="d-block w-100 border2 image-height" alt="...">
+            <div class="col-6 col-sm-4 col-md-2 mt-2">
+                <img src="images/house of memories.jpg" class="d-block w-100 border2 image-height" alt="...">
             </div>
-            <div class="col-md-2">
-                <img src="images/maxresdefault.jpg" class="d-block w-100 border2 image-height" alt="...">
+            <div class="col-6 col-sm-4 col-md-2 mt-2">
+                <img src="images/until i found you.jpg" class="d-block w-100 border2 image-height" alt="...">
             </div>
     </div>
 </div>
     <div class="carousel-item">
         <div class="row ">
-            <div class="col-md-2">
-                <img src="images/76ea18c77adfaf743c818fe283a8a776.jpg" class="d-block w-100 border2 image-height" alt="...">
+            <div class="col-6 col-sm-4 col-md-2 mt-2">
+                <img src="images/genius.jpg" class="d-block w-100 border2 image-height" alt="...">
             </div>
-            <div class="col-md-2">
-                <img src="images/maxresdefault.jpg" class="d-block w-100 border2 image-height " alt="...">
+            <div class="col-6 col-sm-4 col-md-2 mt-2">
+                <img src="images/fantasize.jpg" class="d-block w-100 border2 image-height" alt="...">
             </div>
-            <div class="col-md-2">
-                <img src="images/maxresdefault.jpg" class="d-block w-100 border2 image-height" alt="...">
+            <div class="col-6 col-sm-4 col-md-2 mt-2">
+                <img src="images/untouchable.jpg" class="d-block w-100 border2 image-height" alt="...">
             </div>
-            <div class="col-md-2">
-                <img src="images/maxresdefault.jpg" class="d-block w-100 border2 image-height" alt="...">
+            <div class="col-6 col-sm-4 col-md-2 mt-2">
+                <img src="images/dandelions.jpg" class="d-block w-100 border2 image-height" alt="...">
             </div>
-            <div class="col-md-2">
-                <img src="images/maxresdefault.jpg" class="d-block w-100 border2 image-height" alt="...">
+            <div class="col-6 col-sm-4 col-md-2 mt-2">
+                <img src="images/house of memories.jpg" class="d-block w-100 border2 image-height" alt="...">
             </div>
-            <div class="col-md-2">
-                <img src="images/maxresdefault.jpg" class="d-block w-100 border2 image-height" alt="...">
+            <div class="col-6 col-sm-4 col-md-2 mt-2">
+                <img src="images/until i found you.jpg" class="d-block w-100 border2 image-height" alt="...">
             </div>
         </div>
     </div>
@@ -316,23 +341,127 @@
     </a>
     </div>
     </section>
-    <!-- Footer -->
-    <footer class="bg-dark py-3 mt-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <p class="text-light">&copy; 2024 Saggitarius</p>
-                </div>
-                <div class="col-md-6 text-right">
-                    <p class="text-light">Designed by Mariam Ali</p>
-                </div>
+<!-- Top Artists Section -->
+<section class="top-artists my-5">
+    <div class="container">
+        <h2 class="text-center mb-4 text-light">Top Artists</h2>
+
+        <!-- Switch Button Group -->
+        <div class="text-center mb-3">
+            <div class="btn-group" role="group" aria-label="Language Switch">
+                <button type="button" class="btn  switch-language" data-language="english">English Songs</button>
+                <button type="button" class="btn  switch-language" data-language="hindi">Hindi Songs</button>
             </div>
         </div>
-    </footer>
+
+        <div class="row artist-row">
+            <!-- English Artist Cards -->
+            <div class="col-md-4 mb-4 english-artist">
+                <div class="artist-card text-center">
+                    <img src="images/artist1.png" class="img-fluid rounded-circle" alt="Artist 1" style="width: 200px; height: 200px;">
+                    <h3 class="text-light">Justin Bieber</h3>
+                   
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 english-artist">
+                <div class="artist-card text-center">
+                    <img src="images/artist2.webp" class="img-fluid rounded-circle" alt="Artist 2" style="width: 200px; height: 200px;">
+                    <h3 class="text-light">Taylor Swift</h3>
+                   
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 english-artist">
+                <div class="artist-card text-center">
+                    <img src="images/artist3.png" class="img-fluid rounded-circle" alt="Artist 3" style="width: 200px; height: 200px;">
+                    <h3 class="text-light">Ariana Grande</h3>
+                   
+                </div>
+            </div>
+            <!-- Hindi Artist Cards -->
+            <div class="col-md-4 mb-4 hindi-artist" style="display: none;">
+                <div class="artist-card text-center ">
+                    <img src="images/artist4.webp" class="img-fluid rounded-circle" alt="Artist 4" style="width: 200px; height: 200px;">
+                    <h3 class="text-light">Arjit Singh</h3>
+                   
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 hindi-artist" style="display: none;">
+                <div class="artist-card text-center ">
+                    <img src="images/artist5.jfif" class="img-fluid rounded-circle" alt="Artist 4" style="width: 200px; height: 200px;">
+                    <h3 class="text-light">Sonu Nigham</h3>
+                   
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 hindi-artist" style="display: none;">
+                <div class="artist-card text-center ">
+                    <img src="images/artist6.jpg" class="img-fluid rounded-circle" alt="Artist 4" style="width: 200px; height: 200px;">
+                    <h3 class="text-light">Shreya Goshal</h3>
+                   
+                </div>
+            </div>
+            <!-- Add more artist cards as needed -->
+        </div>
+    </div>
+</section>
+
+
+   <!-- Footer -->
+<footer class="bg-dark py-3 mt-5">
+    <div class="container">
+        
+       
+        
+        <!-- Music Downloader App Description -->
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <a class="text-light" href="#">About Us</a>
+            </div>
+            <div class="col-md-4 text-center">
+                <a class="text-light" href="#">FAQs</a>
+            </div>
+            <div class="col-md-4 text-center">
+                <a class="text-light" href="#">Terms And Policy</a>
+            </div>
+           
+
+
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6">
+                <p class="text-light">&copy; 2024 Saggitarius</p>
+            </div>
+            <div class="col-md-6 text-right">
+                <p class="text-light">Designed by Mariam Ali</p>
+            </div>
+        </div>
+        
+        
+    </div>
+</footer>
+
+    
 
     <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    
+    
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            
+            $('.switch-language').click(function() {
+                var language = $(this).data('language');
+                if (language === 'english') {
+                    $('.english-artist').show();
+                    $('.hindi-artist').hide();
+                } else {
+                    $('.english-artist').hide();
+                    $('.hindi-artist').show();
+                }
+            });
+        });
+    </script>
 </body>
 </html>

@@ -2,8 +2,9 @@ body {
   background-color: #1e1433;
 }
 
-.logo {
+.logo-img {
   height: 50px;
+  margin-left:  -236px;
 }
 .bg-dark {
   background-image: linear-gradient(180deg, #1c1c1c, #1c1b1b 42.69%, #161616);
@@ -34,16 +35,21 @@ body {
   border-left: 2px solid white;
   padding-left: 20px;
 }
-.mx-auto.margin-set {
-  margin-right: 20px !important;
-}
+
+
 .navbar-nav {
+  border-top: 1px solid white; 
+  padding-top: 5px; 
   gap: 150px;
+}
+.nav-item {
+  margin-bottom: 10px; 
 }
 .border2 {
   border-radius: 10px;
   height: 332px;
 }
+
 .carousel-section {
   margin-top: 150px;
 }
@@ -63,56 +69,30 @@ body {
 .card-height {
   height: 450px;
 }
-body {
-  margin: 0;
-  padding: 0;
-}
-
-.background-image {
-  background-image: url("./images/girl-1990347_1920.jpg");
-  background-position: center;
-  background-size: cover;
-  height: 70vh;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-.contact-heading {
-  background: transparent;
-  padding: 20px;
-  border-radius: 10px;
-  width: 40%;
-  text-align: center;
-  margin-right: 10%;
-}
-
-.form-container {
-  background: rgba(255, 255, 255, 0.8);
-  padding: 20px;
-  border-radius: 10px;
-  width: 80%;
-  max-width: 400px;
-}
-
-.form-group {
-  margin-bottom: 20px;
-}
-
-label {
-  font-weight: bold;
-}
-
-.form-control {
-  transition: border-color 0.3s ease-in-out;
+.switch-language {
   border-radius: 20px;
-  border-color: blueviolet;
+  background-color: #1e1433;
+  color: #fff;
+  border: 1px solid black; 
 }
 
-.error {
-  border: 2px solid red !important;
+.switch-language:hover {
+  background-color:black; 
+  color: #fff; 
+  border-color: #0fff; 
 }
-.img-2 {
-  width: 600px;
-  border-radius: 20px;
+
+
+
+@media (max-width: 990px) {
+  .logo-img {
+      
+      margin-left: -20px;
+     
+  }
+  .navbar-nav{
+    gap:0
+  }
 }
+
+
