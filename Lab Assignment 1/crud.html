@@ -7,21 +7,21 @@
     <!-- Include Bootstrap CSS -->
     
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-   
+    <link rel="stylesheet" href="style3.css">
 </head>
 <body>
 
 <div class="container mt-5">
-    <h2 class="mb-4"> CRUD Operations</h2>
+    <h2 class="mb-4 text-light"> CRUD Operations</h2>
 
     <!-- Create Form -->
     <form id="createForm">
         <div class="form-group">
-            <label for="createTitle">Title:</label>
+            <label for="createTitle" class="text-light">Title:</label>
             <input type="text" class="form-control" id="createTitle" required value="new story">
         </div>
         <div class="form-group">
-            <label for="createContent">Content:</label>
+            <label for="createContent"  class="text-light">Content:</label>
             <textarea class="form-control" id="createContent" rows="3" required>New Content</textarea>
         </div>
         <button id="createBtn" type="submit" class="btn btn-primary">Create</button>
