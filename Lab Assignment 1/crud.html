@@ -10,28 +10,32 @@
     <link rel="stylesheet" href="style3.css">
 </head>
 <body>
+  
 
 <div class="container mt-5">
-    <h2 class="mb-4 text-light"> CRUD Operations</h2>
+    <div class="background-image"></div>
+    <h2 class="mb-4 text-light text-center"> ADD Music</h2>
 
     <!-- Create Form -->
     <form id="createForm">
         <div class="form-group">
             <label for="createTitle" class="text-light">Title:</label>
-            <input type="text" class="form-control" id="createTitle" required value="new story">
+            <input type="text" class="form-control" id="createTitle" required value="music name">
         </div>
         <div class="form-group">
             <label for="createContent"  class="text-light">Content:</label>
-            <textarea class="form-control" id="createContent" rows="3" required>New Content</textarea>
+            <textarea class="form-control" id="createContent" rows="3" required>Description</textarea>
         </div>
-        <button id="createBtn" type="submit" class="btn btn-primary">Create</button>
-        <button id="clearBtn" type="submit" class="btn btn-primary" style="display: none;">Clear</button>
+        <button id="createBtn" type="submit" class="btn bg-dark text-light">Create</button>
+        <button id="clearBtn" type="submit" class="btn bg-dark text-light " style="display: none;">Clear</button>
     </form>
 
     <hr>
+    <button id="refreshBtn" class="btn bg-dark text-light">Refresh Stories</button>
 
     <!-- Display Stories -->
     <div id="List"></div>
+    
 
 </div>
 
