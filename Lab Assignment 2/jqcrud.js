@@ -72,7 +72,7 @@ function displayStories() {
                     `<div class="card mb-3">
                         <div class="card-body">
                             <h3 class="card-title">${story.title}</h3>
-                            <p class="card-text">${story.body}</p>
+                            <p class="card-text">${story.content}</p>
                             <div>
                                 <button class="btn btn-danger btn-sm mr-2 btn-edit" data-id="${story.id}">Edit</button>
                                 <button class="btn btn-danger btn-sm mr-2 btn-del" data-id="${story.id}">Delete</button>
@@ -148,7 +148,7 @@ function editBtnClicked(event) {
       success: function (data) {
           $("#clearBtn").show();
           $("#createTitle").val(data.title);
-          $("#createContent").val(data.body);
+          $("#createContent").val(data.content);
           $("#createBtn").html("Update");
           $("#createBtn").attr("data-id", data.id);
       },
