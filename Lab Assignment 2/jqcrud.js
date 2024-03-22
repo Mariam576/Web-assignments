@@ -1,39 +1,100 @@
-// Function to fetch and display stories
+$(document).ready(function() {
+            
+    $('.switch-language').click(function() {
+        var language = $(this).data('language');
+        if (language === 'english') {
+            $('.english-artist').show();
+            $('.hindi-artist').hide();
+        } else {
+            $('.english-artist').hide();
+            $('.hindi-artist').show();
+        }
+    })
+       
+    $('.searchIcon').click(function() {
+       $('.form-inline').slideToggle()
+      
+    });
+    $("#submitBtn").on("click", handleFormSubmissions);
+});
+function handleFormSubmissions(event) {
+    console.log("inside handleFormSubmission");
+
+    let firstName = $("#firstName").val();
+    let lastName = $("#lastName").val();
+    let email = $("#email").val();
+    let message = $("#message").val();
+    let errorFlag = false;
+
+    
+    $(".form-control").removeClass("error");
+
+    if (!firstName) {
+      $("#firstName").addClass("error");
+      errorFlag = true;
+    }
+
+    if (!lastName) {
+      $("#lastName").addClass("error");
+      errorFlag = true;
+    }
+
+    if (!email) {
+      $("#email").addClass("error");
+      errorFlag = true;
+    }
+
+    if (!message) {
+      $("#message").addClass("error");
+      errorFlag = true;
+    }
+
+    if (errorFlag) {
+      console.log("Form has errors");
+      event.preventDefault();
+    } else {
+      console.log("Form is valid");
+    }
+  }
+
+  
 function displayStories() {
-  $.ajax({
-      url: "https://jsonplaceholder.typicode.com/posts",
-      method: "GET",
-      dataType: "json",
-      success: function (data) {
-          var List = $("#List");
-          List.empty();
+    $.ajax({
+        url: "https://usmanlive.com/wp-json/api/stories",
+        method: "GET",
+        dataType: "json",
+        success: function (data) {
+            var List = $("#List");
+            List.empty();
 
-          $.each(data, function (index, story) {
-              List.append(
-                  `<div class="mb-3">
-                      <h3 class="text-light">${story.title}</h3>
-                      <div class="text-light">${story.body}</div>
-                      <div>
-                          <button class="btn btn-info btn-sm mr-2 btn-edit" data-id="${story.id}">Edit</button>
-                          <button class="btn btn-danger btn-sm mr-2 btn-del" data-id="${story.id}">Delete</button>
-                      </div>
-                  </div>
-                  <hr />`
-              );
-          });
+            $.each(data, function (index, story) {
+                List.append(
+                    `<div class="card mb-3">
+                        <div class="card-body">
+                            <h3 class="card-title">${story.title}</h3>
+                            <p class="card-text">${story.body}</p>
+                            <div>
+                                <button class="btn btn-danger btn-sm mr-2 btn-edit" data-id="${story.id}">Edit</button>
+                                <button class="btn btn-danger btn-sm mr-2 btn-del" data-id="${story.id}">Delete</button>
+                            </div>
+                        </div>
+                    </div>`
+                );
+            });
 
-      },
-      error: function (error) {
-          console.error("Error fetching data:", error);
-      },
-  });
+        },
+        error: function (error) {
+            console.error("Error fetching data:", error);
+        },
+    });
 }
+
 
 // Function to delete a story
 function deleteStory() {
   let Id = $(this).attr("data-id");
   $.ajax({
-      url: "https://jsonplaceholder.typicode.com/posts/" + Id,
+      url: "https://usmanlive.com/wp-json/api/stories/" + Id,
       method: "DELETE",
       success: function () {
           displayStories();
@@ -52,7 +113,7 @@ function handleFormSubmission(event) {
   var content = $("#createContent").val();
   if (Id) {
       $.ajax({
-          url: "https://jsonplaceholder.typicode.com/posts/" + Id,
+          url: "https://usmanlive.com/wp-json/api/stories/" + Id,
           method: "PUT",
           data: { title, content },
           success: function () {
@@ -64,7 +125,7 @@ function handleFormSubmission(event) {
       });
   } else {
       $.ajax({
-          url: "https://jsonplaceholder.typicode.com/posts",
+          url: " https://usmanlive.com/wp-json/api/stories",
           method: "POST",
           data: { title, content },
           success: function () {
@@ -82,7 +143,7 @@ function editBtnClicked(event) {
   event.preventDefault();
   let storyId = $(this).attr("data-id");
   $.ajax({
-      url: "https://jsonplaceholder.typicode.com/posts/" + storyId,
+      url: " https://usmanlive.com/wp-json/api/stories/" + storyId,
       method: "GET",
       success: function (data) {
           $("#clearBtn").show();
@@ -114,11 +175,5 @@ $(document).ready(function () {
       $("#createContent").val("");
   });
 
-  // Function to refresh the list of stories
-  function refreshStories() {
-      displayStories();
-  }
-
-  // Attach a click event listener to the refresh button
-  $(document).on("click", "#refreshBtn", refreshStories);
+  
 });

@@ -7,13 +7,94 @@
     <!-- Include Bootstrap CSS -->
     
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
+    <header class="fixed-top">
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+            <div class="container">
+               
+                <button class="navbar-toggler text-white" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <!-- Logo -->
+                <a class="navbar-brand mx-auto text-light mr-auto " href="index.html">
+                    <img class="logo-img" src="images/transparent_2024-02-28T13-19-31.png" alt="Logo"> Saggitarius
+                </a>
+        
+              
+        
+               
+        
+       <!-- Search Form -->
+    <form class="form-inline my-2 my-lg-0">
+        <div class="input-group">
+            <input class="form-control form-control-sm mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <div class="input-group-append">
+                <button class="btn btn-sm  my-sm-0" type="submit">
+                    <img src="images/Untitled-1.svg" alt="Search">
+                </button>
+            </div>
+        </div>
+    </form>
+    <img  class='searchIcon' src="images/Untitled-1 copy.svg">
+    
+    
+                    <!-- Contact Us -->
+                    <a class="nav-link text-light Contact" href="contactUs.html">Contact Us</a>
+                    
+                    <!-- Login -->
+                    <a class="nav-link text-light border1 login-text" href="#">
+                        <img class="login" src="images/Untitled-2.svg" alt="Login"> Log In
+                    </a>
+               
+        </nav>
+        
+    
+        <!-- Navigation Items Container -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+            <div class="container">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link text-light" href="#">All <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">Trending Now</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">Old Songs</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-light" href="#" id="moodsGenreDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Moods&Genre
+                            </a>
+                            <div class="dropdown-menu bg-dark" aria-labelledby="moodsGenreDropdown">
+                                <a class="dropdown-item text-light" href="#">Happy</a>
+                                <a class="dropdown-item text-light" href="#">Sad</a>
+                                <a class="dropdown-item text-light" href="#">Excited</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-light" href="#" id="topPlaylistsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Top Playlists
+                            </a>
+                            <div class="dropdown-menu bg-dark" aria-labelledby="topPlaylistsDropdown">
+                                <a class="dropdown-item text-light" href="#">Pop Hits</a>
+                                <a class="dropdown-item text-light" href="#">Rock Classics</a>
+                                <a class="dropdown-item text-light" href="#">Hip-Hop Vibes</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
 <div class="container mt-5">
-    <div class="background-image"></div>
+    <div class="background-image-2"></div>
     <h2 class="mb-4 text-light text-center"> ADD Music</h2>
 
     <!-- Create Form -->
@@ -31,7 +112,7 @@
     </form>
 
     <hr>
-    <button id="refreshBtn" class="btn bg-dark text-light">Refresh Stories</button>
+    
 
     <!-- Display Stories -->
     <div id="List"></div>
