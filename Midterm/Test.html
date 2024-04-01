@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-Z2F8B8ZyPAMFNU3WPPsUpPze3PFgHSmKZO4Fk5jS+QU6sN8AHRl8P7lCddufcAM9" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary nav-color">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">KP</a>
+          <button class="hamburger active bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav text-light"> <!-- Added text-light class here -->
+                <li class="nav-item">
+                    <a class="nav-link active text-light" aria-current="page" href="#">War</a> <!-- Added text-light class here -->
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#">Ukraine</a> <!-- Added text-light class here -->
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#">World</a> <!-- Added text-light class here -->
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#">Economics</a> <!-- Added text-light class here -->
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#">Videos</a> <!-- Added text-light class here -->
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#">Analysis</a> <!-- Added text-light class here -->
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#">Opinion</a> <!-- Added text-light class here -->
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#">Classifieds</a> <!-- Added text-light class here -->
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#">Spotlight</a> <!-- Added text-light class here -->
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-toggle="dropdown" aria-expanded="false">Dropdown</a> <!-- Added text-light class here -->
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        </div>
+      </nav>
+
+    <header>
+        <div class="container-fluid p-40">
+            <div class="row align-items-center top-row mt-4 d-flex">
+                <div class="col col-xl-1">
+                    <img src="images/menu.png" alt="">
+                    <img src="images/search-interface-symbol.png" alt="">
+                </div>
+                <div class="col-2 col-xl-3 d-flex social-icons">
+                    <a href="#" target="_blank" aria-label="Facebook"><img src="images/fb.svg" alt=""></a>
+                    <a href="#" target="_blank" aria-label="Telegram"><img src="images/twitter.svg" alt=""></a>
+                    <a href="#" target="_blank" aria-label="Instagram"><img src="images/telegram.svg" alt=""></a>
+                    <a href="#" target="_blank" aria-label="Twitter"><img src="images/instagram.svg" alt=""></a>
+                    <a href="#" target="_blank" aria-label="Youtube"><img src="images/utube.svg" alt=""></a>
+                    <a href="#" class="a-ic-in" target="_blank" aria-label="Linkedin"><img src="images/linkedin.svg"
+                            alt=""></a>
+                    <a href="#" target="_blank" aria-label="Threads"><img src="images/thread.svg" class="width-25"
+                            alt=""></a>
+                </div>
+                <div class="col-xl-4 logo text-center">
+                    <a href="https://www.kyivpost.com"><img src="images/Kyivpost_logo_Black.svg" alt="Kyiv Post"></a>
+                </div>
+                <div class="col-xl-4 d-none d-xl-block text-end">
+                    <a href="/"><img style="aspect-ratio: 35/43" src="images/kador_logo.jpg" alt="Kador Group"
+                            width="70"></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <nav class="navbar navbar-expand-sm text-center nav-header justify-content-center">
+                        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                            <ul class="navbar-nav ">
+                                <li data-id="88" class="nav-item">
+                                    <a href="https://www.kyivpost.com/topic/war-in-ukraine" class="nav-link"
+                                        target="_self">War</a>
+                                </li>
+                                <li data-id="83" class="nav-item">
+                                    <a href="https://www.kyivpost.com/category/ukraine" class="nav-link"
+                                        target="_self">Ukraine</a>
+                                </li>
+                                <li data-id="12" class="nav-item dropdown">
+                                    <a href="https://www.kyivpost.com/category/world" class="nav-link dropdown-toggle"
+                                        id="navbarScrollingDropdown-12" role="button" aria-expanded="false"
+                                        target="_self">World</a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown-12">
+                                        <li>
+                                            <a class="dropdown-item"
+                                                href="https://www.kyivpost.com/category/north-america"
+                                                target="_self">North America</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="https://www.kyivpost.com/category/europe"
+                                                target="_self">Europe</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item"
+                                                href="https://www.kyivpost.com/category/eastern-europe"
+                                                target="_self">Eastern Europe</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item"
+                                                href="https://www.kyivpost.com/category/middle-east"
+                                                target="_self">Middle East</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="https://www.kyivpost.com/category/asia"
+                                                target="_self">Asia</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li data-id="55" class="nav-item dropdown">
+                                    <a href="https://www.kyivpost.com/category/economics"
+                                        class="nav-link dropdown-toggle" id="navbarScrollingDropdown-55" role="button"
+                                        aria-expanded="false" target="_self">Economics</a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown-55">
+                                        <li>
+                                            <a class="dropdown-item" href="https://www.kyivpost.com/category/business"
+                                                target="_self">Business</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="https://www.kyivpost.com/category/technology"
+                                                target="_self">Technology</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="https://www.kyivpost.com/category/finance"
+                                                target="_self">Finance</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item"
+                                                href="https://www.kyivpost.com/category/agriculture"
+                                                target="_self">Agriculture</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li data-id="13" class="nav-item">
+                                    <a href="https://www.kyivpost.com/videos" class="nav-link" target="_self">Videos</a>
+                                </li>
+                                <li data-id="235" class="nav-item">
+                                    <a href="https://www.kyivpost.com/analysis" class="nav-link"
+                                        target="_self">Analysis</a>
+                                </li>
+                                <li data-id="15" class="nav-item">
+                                    <a href="https://www.kyivpost.com/opinions" class="nav-link"
+                                        target="_self">Opinions</a>
+                                </li>
+                                <li data-id="21" class="nav-item">
+                                    <a href="https://www.kyivpost.com/classifieds" class="nav-link"
+                                        target="_self">Classifieds</a>
+                                </li>
+                                <li data-id="239" class="nav-item">
+                                    <a href="https://www.kyivpost.com/category/biz-spotlight" class="nav-link"
+                                        target="_self">Spotlight</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- section2 -->
+    <section class="container-fluid">
+        <div class="container">
+        <div class="row justify-center">
+            <div id="widget" class="col-lg-8">
+                <div class="idget_title">RUSSIA'S LOSSES</div>
+                <div class="stat_block">
+                    <div class="small-title text-center">Troops <sup>+650</sup></div>
+                    <div class="ico-for-stat">
+                        <img class="ico-for-stat-img" src="images/troops.png"
+                            alt="troops" pinger-seen="true">
+                    </div>
+                    <div class="stat">
+                        <div class="stat-count">442170</div>
+                    </div>
+                </div>
+
+                <div class="stat_block">
+                    <div class="small-title text-center">Tanks <sup>+15</sup></div>
+                    <div class="ico-for-stat">
+                        <img class="ico-for-stat-img" src="https://www.kyivpost.com/images/russia_losses/tanks.png"
+                            alt="tanks" pinger-seen="true">
+                    </div>
+                    <div class="stat">
+                        <div class="stat-count">6966</div>
+                    </div>
+                </div>
+
+                <div class="stat_block">
+                    <div class="small-title text-center">Artillery <sup>+44</sup></div>
+                    <div class="ico-for-stat">
+                        <img class="ico-for-stat-img" src="https://www.kyivpost.com/images/russia_losses/artillery.png"
+                            alt="artillery" pinger-seen="true">
+                    </div>
+                    <div class="stat">
+                        <div class="stat-count">11050</div>
+                    </div>
+                </div>
+
+                <div class="stat_block">
+                    <div class="small-title text-center">Arm.VEH <sup>+20</sup></div>
+                    <div class="ico-for-stat">
+                        <img class="ico-for-stat-img" src="https://www.kyivpost.com/images/russia_losses/car.png"
+                            alt="armd-veh" pinger-seen="true">
+                    </div>
+                    <div class="stat">
+                        <div class="stat-count">13304</div>
+                    </div>
+                </div>
+
+                <div class="stat_block">
+                    <div class="small-title text-center">Aircraft </div>
+                    <div class="ico-for-stat">
+                        <img class="ico-for-stat-img" src="https://www.kyivpost.com/images/russia_losses/aircrafts.png"
+                            alt="aircrafts" pinger-seen="true">
+                    </div>
+                    <div class="stat">
+                        <div class="stat-count">347</div>
+                    </div>
+                </div>
+
+                <div class="stat_block">
+                    <div class="small-title text-center">Heli </div>
+                    <div class="ico-for-stat">
+                        <img class="ico-for-stat-img" src="https://www.kyivpost.com/images/russia_losses/heli.png"
+                            alt="helicopters" pinger-seen="true">
+                    </div>
+                    <div class="stat">
+                        <div class="stat-count">325</div>
+                    </div>
+                </div>
+
+                <div class="stat_block">
+                    <div class="small-title text-center">Ships </div>
+                    <div class="ico-for-stat">
+                        <img class="ico-for-stat-img" src="https://www.kyivpost.com/images/russia_losses/ship.png"
+                            alt="ships" pinger-seen="true">
+                    </div>
+                    <div class="stat">
+                        <div class="stat-count">26</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+                <div class="d-lg-block">
+                    <form action="" class="subscribe-form">
+                        <div class="title">
+                            <span class="form-call-to-action">TODAY`S HEADLINES – a daily newsletter by Kyiv Post</span>
+                         
+                        </div>
+                        <input id="mce-EMAIL" type="email" name="EMAIL"
+                            class=" email form-control input-email col-6 ms-1" required=""
+                            placeholder="Email Address">
+                        <button class="btn-subscribe">SUBSCRIBE</button>
+                       
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <!-- News Section -->
+    <section class="news-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <a href="#" class="top-title">TOP NEWS</a>
+                    <img src="https://static.kyivpost.com/storage/2024/04/01/fde94cb7d414ff2519eed4ed4eb4df5f.jpeg?w=320&q=75&f=webp" class="mt-5" alt="">
+                    <div class="news-content">
+                        <a class="label" href="#">
+                            India
+                        </a>
+                        <div class="title">
+                            <a href="#">OPINION: India’s Role in Forging Peace in Ukraine</a>
+                        </div>
+                        <div class="d-flex">
+                            <div class="author">By Alina Hrytsenko</div>
+                            <div class="time">
+                                2 hours ago
+                            </div>
+                        </div>
+                    
+                    </div>
+                   
+            </div>
+            
+            <div class="col-md-6">
+                <img class=" width-img"src="https://static.kyivpost.com/storage/2024/04/01/d29fa3687bb282b0e860136d118f728f.jpeg?w=420&amp;q=85&amp;f=webp" alt="‘Life Can Prevail’ – War in Ukraine: Update for April 1">
+            </div>
+                <div class="col-lg-2 height-img">
+                    <img src="https://static.kyivpost.com/storage/2024/04/01/7c991068c48bf653a4dc9185af5eea29.jpg?w=640&amp;q=75&amp;f=webp" alt="La Grandeur de la France" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="https://static.kyivpost.com/storage/2024/04/01/7c9…068c48bf653a4dc9185af5eea29.jpg?w=640&q=75&f=webp" alt="Image 1" class="img-fluid">
+            </div>
+            <div class="col-md-4">
+                <img src="https://static.kyivpost.com/storage/2024/03/27/4c3cb0e682b7d8023b2aa510c19c4668.webp?w=640&amp;q=75&amp;f=webp" alt="Macron’s Moment to Cement a Legacy" loading="lazy">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="https://static.kyivpost.com/storage/2024/03/27/4c3cb0e682b7d8023b2aa510c19c4668.webp?w=640&amp;q=75&amp;f=webp" alt="Macron’s Moment to Cement a Legacy" loading="lazy">
+            </div>
+           
+        </div>
+    </div>
+    
+    
+      <footer class="nav-color">
+
+        <img class="footer-logo-img mt-2 " src="images/Capture.PNG" alt="logo">
+         <!-- Music Downloader App Description -->
+         <div class="row">
+            <div class="col-md-2 text-center">
+                <a class="text-light mb-3" href="#">Menu</a><br>
+                <a class="text-light mb-2" href="#">Ukraine</a><br>
+                <a class="text-light" href="#">World</a><br>
+                <a class="text-light" href="#">Business</a><br>
+                <a class="text-light" href="#">Economics</a><br>
+                <a class="text-light" href="#">Classifieds</a><br>
+                <a class="text-light" href="#">Spotlight</a><br>
+                <a class="text-light" href="#">PDF Archive</a><br>
+
+            </div>
+            <div class="col-md-2 text-center">
+                <a class="text-light" href="#">Multimedia</a><br>
+                <a class="text-light mb-3" href="#">Video</a><br>
+                <a class="text-light mb-3" href="#">Cartoons</a><br>
+            </div>
+            <div class="col-md-2 text-center">
+                <a class="text-light" href="#">About</a><br>
+                <a class="text-light mb-3" href="#">About Us</a><br>
+                <a class="text-light mb-3" href="#">Contact Us</a><br>
+                <a class="text-light mb-3" href="#">Advertising</a><br>
+                <a class="text-light mb-3" href="#">Newsletter</a><br>
+            </div>
+            <div class="col-md-2 text-center">
+                <a class="text-light" href="#">Policies</a><br>
+                <a class="text-light mb-3" href="#">Privary Policy</a><br>
+                <a class="text-light mb-3" href="#">Cookie Policy</a><br>
+                <a class="text-light mb-3" href="#">Terms And Conditions</a><br>
+            </div>
+            <div class="col-md-4 text-center"><p class="text-light">
+                Web links to Kyiv Post material are allowed provided that they contain a hyperlink to the
+stories and only a brief extract (not more than 10 percent) of the text.
+        </p></div>
+        <p class="text-bottom text-center col-md-12 text-light">
+            All materials, including photographs, contained on this site are protected by copyright law and may
+not be reproduced without the prior written permission of BIZNESGRUPP TOV at <span>news@kyivpost.com.</span>
+All Interfax-Ukraine news agency stories cannot be reproduced or distributed in any form without
+written permission of Interfax-Ukraine.
+        </p>
+
+      </footer>
+    
+</body>
+   <!-- Bootstrap JS -->
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+   
+   
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script >
+    $(document).ready(function () {
+        $('img').hover(function () {
+            var imgAlt = $(this).attr('alt');
+            $('#navbarNavDropdown').append('<li class="nav-item">' +
+                '<a class="nav-link text-light" href="#">' + imgAlt + '</a>' +
+                '</li>');
+        });
+    });
+  
+</script>
+</html>

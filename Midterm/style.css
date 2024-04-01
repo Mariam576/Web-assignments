@@ -1,0 +1,154 @@
+.nav-color{
+    background-color: black;
+}
+.body{
+  margin: 0;
+  padding: 0;
+  color: #000;
+}
+.container{
+  max-width: 100%;
+}
+.col-xl-1 img,.width-25{
+  width: 25px;
+}
+.social-icons a {
+  border: 1px solid #676767;
+  display: inline-block;
+  height: 28px;
+  margin-right: 3px;
+  padding: 5px;
+  text-align: center;
+  width: 28px;
+  display: flex;
+}
+.logo img{
+  max-width: 345px;
+}
+.top-row {
+  justify-content: center;
+}
+.p-40,section{
+  padding: 0 40px;
+}
+.nav-link{
+  color:black
+}
+#widget{
+  display: flex;
+  gap: 20px;
+  border: 1px solid #212121;
+  float: left;
+  overflow: visible;
+  padding: 10px 0;
+  position: relative;
+}
+.justify-center{
+  justify-content: center;
+}
+.stat_block {
+  border-right: 1px solid rgba(0, 0, 0, .1);
+  display: inline-block;
+  width: 13.7%;
+}
+.idget_title {
+  background: #fff;
+  color: #c61f40;
+  font-family: Playfair Display, serif;
+  font-size: 13px;
+  font-weight: 700;
+  left: 42%;
+  margin: 0 auto;
+  padding: 2px 5px;
+  position: absolute;
+  top: -14px;
+  width: auto;
+  z-index: 2;
+}
+.small-title {
+  color: #333;
+  font-size: 11px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.ico-for-stat {
+  display: inline-block;
+  padding: 2px 0 2px 7px;
+  position: relative;
+  width: 40px;
+}
+.ico-for-stat-img {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+}
+.stat_block .stat {
+  display: inline-block;
+  padding: 0 5px 0 6px;
+  position: relative;
+  text-align: left;
+  width: calc(100% - 48px);
+}
+.stat-count{
+  color: #c61f40;
+  font-size: 18px;
+  font-weight: 600;
+}
+.btn-subscribe{
+  background-color: #c61f40;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 13px !important;
+  font-size: 13px;
+  font-weight: 600 !important;
+  height: 30px;
+  line-height: 13px !important;
+  vertical-align: middle;
+  width: calc(40% - 10px);
+  position: absolute;
+  right: 6px;
+  top: 34px;
+  height: 38px;
+}
+.subscribe-form{
+  position: relative;
+}
+.subscribe-form{
+  background-color: #000;
+  padding: 10px;
+}
+.form-call-to-action{
+
+  color: #fff;
+  font-size: 13px;
+  text-align: center;
+}
+.top-title{
+  background: #000;
+  color: #fff;
+  font-family: Playfair Display, serif;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 23px;
+  padding: 0 6px 2px;
+}
+.width-img{
+  width: 600px;
+}
+.height-img{
+  height: 20px;
+}
+.news-section{
+  padding: 60px 0;
+}
+.news-content a{
+  color: #000;
+  text-decoration: none;
+  margin: 10px 0;
+  display: inline-block;
+}
+  .footer-logo-img {
+    aspect-ratio: 50 / 11;
+    width: 180px;
+    margin-left: 520px;
+}
