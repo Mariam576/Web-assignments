@@ -1,61 +1,66 @@
 import json
-import spotipy
-from spotipy.oauth2 import SpotifyClientCredentials
+from googleapiclient.discovery import build
+from googleapiclient.errors import HttpError
 
-# Replace these values with your own credentials
-client_id = '48696840d33245d4a7c8602045c728d0'
-client_secret = 'c92f96344d734a5a8a22f5cd8ffa1431'
+# Define your YouTube API key (replace 'YOUR_API_KEY' with your actual API key)
+API_KEY = 'AIzaSyD6Fupe0Qd_7Nuqd3Ileos5EbRFoqgJA7o'
 
-# Initialize Spotipy client
-client_credentials_manager = SpotifyClientCredentials(client_id=client_id, client_secret=client_secret)
-sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
+def search_youtube_songs(queries, max_results_per_query=100):
+    # Initialize the YouTube Data API v3 client
+    youtube = build('youtube', 'v3', developerKey=API_KEY)
 
-# Playlist URLs
-playlist_urls = [
-    'https://open.spotify.com/playlist/37i9dQZF1DX0XUfTFmNBRM',
-    'https://open.spotify.com/playlist/6X3wpjdFbD8PlTISUIPT2c',
-    'https://open.spotify.com/playlist/656d91JastxforR4ac4eIs',
-    'https://open.spotify.com/playlist/0i2S0eEdftTrmLKueMWUKX',
-    'https://open.spotify.com/playlist/1SX3oHTD0iRZM4c7TXZKL9',
-    'https://open.spotify.com/playlist/2bcSVCNr1AtyVrB3YP9dLl',
-    'https://open.spotify.com/playlist/5v81llV1qv1gPhu5GAUj6M',
-    'https://open.spotify.com/playlist/37i9dQZF1DX8xfQRRX1PDm',
-    'https://open.spotify.com/playlist/04227MSKljdgaDF8fmbzoD',
-    'https://open.spotify.com/playlist/60E39cllB6TpXJyVb3Cd0p'
-]
+    # List to store song details
+    songs_data = []
 
-# Define a dictionary to store playlist details and tracks
-playlists_data = []
+    try:
+        for query_data in queries:
+            query = query_data['query']
+            region_code = query_data['regionCode']
+            language = query_data['language']
 
-# Get playlist details
-for playlist_url in playlist_urls:
-    playlist_id = playlist_url.split('/')[-1]
-    playlist = sp.playlist(playlist_id)
-    playlist_data = {
-        "name": playlist['name'],
-        "total_tracks": playlist['tracks']['total'],
-        "url": playlist_url,
-        "tracks": []
-    }
+            # Make a request to fetch songs based on the user's search query
+            request = youtube.search().list(
+                q=query,
+                type='video',
+                part='snippet',
+                maxResults=max_results_per_query,
+                regionCode=region_code
+            )
+            response = request.execute()
+
+            for item in response['items']:
+                video_id = item['id']['videoId']
+                video_title = item['snippet']['title']
+                thumbnail_url = item['snippet']['thumbnails']['medium']['url']
+
+                # Construct embeddable YouTube URL
+                embed_url = f'https://www.youtube.com/embed/{video_id}'
+
+                # Construct song data object
+                song_data = {
+                    'name': video_title,
+                    'url': embed_url,
+                    'thumbnail': thumbnail_url,
+                    'language': language
+                }
+
+                # Append song data to the list
+                songs_data.append(song_data)
+
+    except HttpError as e:
+        print(f'HTTP error occurred: {e}')
     
-    # Batch processing: Fetch track details in batches
-    track_ids = [track['track']['id'] for track in playlist['tracks']['items']]
-    track_details_batch = sp.tracks(track_ids)
-    
-    for idx, track in enumerate(playlist['tracks']['items']):
-        track_data = {
-            "name": track['track']['name'],
-            "artists": [artist['name'] for artist in track['track']['artists']],
-            "album": track['track']['album']['name'],
-            "url": track['track']['external_urls']['spotify']
-        }
-        
-        # Retrieve image URL from batch response
-        if len(track_details_batch['tracks']) > idx and len(track_details_batch['tracks'][idx]['album']['images']) > 0:
-            track_data["image"] = track_details_batch['tracks'][idx]['album']['images'][0]['url']
-        else:
-            track_data["image"] = None
-        
-        playlist_data["tracks"].append(track_data)
-    
-    playlists_data.append(playlist_data)
+    return songs_data
+
+# Define search query for new English songs
+new_english_query = {'query': 'new English songs', 'regionCode': 'US', 'language': 'English'}
+
+# Example Usage:
+songs_results = search_youtube_songs([new_english_query], max_results_per_query=100)
+
+# Save fetched song data to a JSON file
+output_file = 'new_english_songs.json'
+with open(output_file, 'w', encoding='utf-8') as f:
+    json.dump(songs_results, f, ensure_ascii=False, indent=4)
+
+print(f'Successfully saved {len(songs_results)} new English songs data to {output_file}')

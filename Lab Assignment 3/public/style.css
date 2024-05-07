@@ -53,6 +53,7 @@ body {
 
 .carousel-section {
   margin-top: 150px;
+  position: relative;
 }
 .carousel-indicators {
   bottom: -44px;
@@ -188,6 +189,33 @@ label {
   color: #fff;
   border: 1px solid black; 
 }
+.heightset{
+  margin-top: 200px;
+}
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Adjust spacing as needed */
+}
+
+.pagination {
+  display: inline-block;
+}
+
+.pagination-link {
+  display: inline-block;
+  padding: 5px 10px;
+  margin-right: 5px;
+  text-decoration: none;
+  color: #fff; 
+  background-color:#1e1433; 
+  border-radius: 5px;
+}
+
+.pagination-link.active {
+  background-color: black; /* Active state color */
+}
+
 @media (max-width: 990px) {
   .logo-img {
       

@@ -1,0 +1,18 @@
+
+<div class="heightset">
+
+</div>
+
+
+
+
+<ul>
+    <% songs.forEach(song => { %>
+        <li class="text-light">
+            <a href="/download/<%= collection %>/<%= song._id %>" <strong class="text-light">Song Name:</strong> <%= song.name %><br></a> 
+           <a href="/song-details?id=<%= song._id%>" >    <img src="<%= song.thumbnail %>" alt="<%= song.name %> Thumbnail" style="max-width: 200px; max-height: 200px;"><br></a>
+                <small>Click to download</small>
+            
+        </li>
+    <% }) %>
+</ul>
