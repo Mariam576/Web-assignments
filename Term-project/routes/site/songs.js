@@ -33,55 +33,25 @@ router.get("/", async (req, res) => {
         res.status(500).send("Internal Server Error");
     }
 });
-router.get('/search-results', async (req, res) => {
-    try {
-        const { query, page = 1, limit = 10 } = req.query;
-        const pageNumber = parseInt(page);
-        const limitNumber = parseInt(limit);
-        const skip = (pageNumber - 1) * limitNumber;
-
-        // Save search term in session
-        if (query) {
-            req.session.searchHistory = req.session.searchHistory || [];
-            req.session.searchHistory.push(query);
+    router.get('/search-results', async (req, res) => {
+        try {
+            const { query } = req.query;
+    
+            
+            const songMatches = await Search.find({
+                $or: [
+                    { name: { $regex: new RegExp(query, "i") } }, 
+                    { artists: { $regex: new RegExp(query, "i") } }
+                ]
+            });
+    
+            res.render('search-results', { songMatches, collection:'search_songs' });
+        } catch (error) {
+            console.error('Error fetching search results:', error);
+            res.status(500).send('Internal Server Error');
         }
-
-        const songMatches = await Search.find({
-            $or: [
-                { name: { $regex: new RegExp(query, "i") } },
-                { artists: { $regex: new RegExp(query, "i") } }
-            ]
-        })
-        .skip(skip)
-        .limit(limitNumber);
-
-        const totalResults = await Search.countDocuments({
-            $or: [
-                { name: { $regex: new RegExp(query, "i") } },
-                { artists: { $regex: new RegExp(query, "i") } }
-            ]
-        });
-
-        const totalPages = Math.ceil(totalResults / limitNumber);
-
-        res.render('search-results', {
-            songMatches,
-            query,
-            collection: 'search_songs',
-            pagination: {
-                page: pageNumber,
-                limit: limitNumber,
-                totalPages,
-                totalResults
-            },
-            searchHistory: req.session.searchHistory // Pass search history to the view
-        });
-    } catch (error) {
-        console.error('Error fetching search results:', error);
-        res.status(500).send('Internal Server Error');
-    }
-});
-
+    });
+    
 
     
 router.get('/song-details', async (req, res) => {

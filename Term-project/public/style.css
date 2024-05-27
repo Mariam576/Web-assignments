@@ -45,7 +45,7 @@ body {
 .navbar-nav {
  
   padding-top: 5px; 
-  gap: 150px;
+  gap: 170px;
 }
 .nav-item {
   margin-bottom: 10px; 
@@ -265,13 +265,6 @@ label {
 
 .singer_image{
   object-fit: cover;
-}
-.pagination-container-2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-
 }
 
 .card-body .card-title{

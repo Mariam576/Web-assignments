@@ -26,16 +26,17 @@ router.post("/token", async (req, res) => {
         email: user.email,
       },
       config.get("jwtPrivateKey"),
-    
     );
+    res.setHeader("Authorization", `Bearer ${token}`);
     
-
-    return res.render("displaytoken",{token});
+   
+  
+  
+    return res.render("displaytoken", {token} );
   } catch (error) {
     console.error(error);
     res.status(500).send("Internal Server Error");
   }
 });
-
 
 module.exports = router;

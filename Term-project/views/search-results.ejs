@@ -1,0 +1,26 @@
+<div class="mt-2"></div>
+    <h1 class="text-light">Song Search Results</h1>
+
+    <div class="row">
+        <% if (songMatches.length > 0) { %>
+            <% songMatches.forEach(song => { %>
+                <div class="col-md-4 mb-4">
+                    <div class="card  bg-dark-2 card-height text-light">
+                        <a href="/song-details?id=<%= song._id %>">
+                            <img src="<%= song.thumbnail || 'images/photo-1470225620780-dba8ba36b745.avif' %>" class="card-img-top" alt="<%= song.name %>">
+                          </a>
+                          
+                        <div class="card-body">
+                            <h5 class="card-title"><%= song.name %></h5>
+                            <a href="/download/<%= collection %>/<%= song._id %>" class="btn btn-primary bg-dark">Download Now</a>
+                            
+                        
+                        </div>
+                    </div>
+                </div>
+            <% }) %>
+        <% } else { %>
+            <p class="text-light ml-3">No matching songs found.</p>
+        <% } %>
+    </div>
+

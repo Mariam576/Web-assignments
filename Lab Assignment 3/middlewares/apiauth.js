@@ -3,8 +3,9 @@ const config = require("config");
 const User = require("../models/User");
 
 async function apiauth(req, res, next) {
+  console.log(req.headers)
   const authHeader = req.header("Authorization");
-
+console.log(authHeader)
   if (!authHeader || !authHeader.startsWith("Bearer ")) {
     return res.status(401).send("Access denied. No token provided.");
   }
@@ -18,11 +19,18 @@ async function apiauth(req, res, next) {
     if (!user) {
       return res.status(400).send("Invalid token: User doesn't exist");
     }
+
     req.user = user;
     next();
   } catch (err) {
-    console.error(err);
-    return res.status(500).send("Something went wrong at the server");
+    if (err.name === 'TokenExpiredError') {
+      return res.status(401).send("Access denied. Token has expired.");
+    } else if (err.name === 'JsonWebTokenError') {
+      return res.status(401).send("Access denied. Invalid token.");
+    } else {
+      console.error(err);
+      return res.status(500).send("Something went wrong at the server.");
+    }
   }
 }
 

@@ -9,6 +9,9 @@ const { promisify } = require('util');
 const { pipeline } = require('stream');
 
 const methodOverride = require('method-override');
+const attachSessionData = require('./middlewares/sessiondata');
+
+
 
 
 
@@ -34,14 +37,17 @@ app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // Route imports
+app.use(attachSessionData);
+
+
+app.use("/api", apiauth, require("./routes/api/songs"));
 
 app.use("/", require("./routes/site/auth"));
-app.use("/api", apiauth, require("./routes/api/songs"));
-//app.use("/", require("./routes/api/message"));
+app.use("/", require("./routes/site/songs"));
 app.use("/", require("./routes/api/auth"));
 
 
-app.use("/", require("./routes/site/songs"));
+
 
 app.use("/", require("./routes/site/download"));
 

@@ -1,0 +1,74 @@
+<div class="heightset"></div>
+<div class="text-light">
+    <% if (song) { %>
+        <h3><%= song.name %></h3>
+        <p>Artist: <%= song.artists.join(', ') %></p>
+        <div>
+            <iframe width="100%" height="500" src="<%= song.url %>" frameborder="0" allowfullscreen></iframe>
+        </div>
+    <% } else if (trending) { %>
+        <h3><%= trending.name %></h3>
+        <div>
+            <iframe width="100%" height="500" src="<%= trending.url %>" frameborder="0" allowfullscreen></iframe>
+        </div>
+    <% } else if (englishSong) { %>
+        <h3><%= englishSong.name %></h3>
+        <div>
+            <iframe width="100%" height="500" src="<%= englishSong.url %>" frameborder="0" allowfullscreen></iframe>
+        </div>
+    <% } else if (search) { %>
+        <h3><%= search.name %></h3>
+        <div>
+            <iframe width="100%" height="500" src="<%= search.url %>" frameborder="0" allowfullscreen></iframe>
+        </div>
+    <% } else if (short) { %>
+        <h3><%= short.name %></h3>
+        <div>
+            <iframe width="100%" height="500" src="<%= short.url %>" frameborder="0" allowfullscreen></iframe>
+        </div>
+    <% } else if (all) { %>
+        <h3><%= all.name %></h3>
+        <div>
+            <iframe width="100%" height="500" src="<%= all.url %>" frameborder="0" allowfullscreen></iframe>
+        </div>
+    <% }
+    else if (hiphop) { %>
+        <h3><%= hiphop.name %></h3>
+        <div>
+            <iframe width="100%" height="500" src="<%= hiphop.url %>" frameborder="0" allowfullscreen></iframe>
+        </div>
+    <% }
+    else if (sad_song) { %>
+        <h3><%= sad_song.name %></h3>
+        <div>
+            <iframe width="100%" height="500" src="<%= sad_song.url %>" frameborder="0" allowfullscreen></iframe>
+        </div>
+    <% }
+    else if (newEnglish) { %>
+        <h3><%= newEnglish.name %></h3>
+        <div>
+            <iframe width="100%" height="500" src="<%= newEnglish.url %>" frameborder="0" allowfullscreen></iframe>
+        </div>
+    <% }
+    else if (rock_song) { %>
+        <h3><%= rock_song.name %></h3>
+        <div>
+            <iframe width="100%" height="500" src="<%= rock_song.url %>" frameborder="0" allowfullscreen></iframe>
+        </div>
+    <% }
+    else if (bollywood_song) { %>
+        <h3><%= bollywood_song.name %></h3>
+        <div>
+            <iframe width="100%" height="500" src="<%= bollywood_song.url %>" frameborder="0" allowfullscreen></iframe>
+        </div>
+    <% }
+    else if (mashup) { %>
+        <h3><%= mashup.name %></h3>
+        <div>
+            <iframe width="100%" height="500" src="<%= mashup.url %>" frameborder="0" allowfullscreen></iframe>
+        </div>
+    <% }
+    else { %>
+        <p>No video found.</p>
+    <% } %>
+</div>

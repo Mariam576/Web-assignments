@@ -1,0 +1,174 @@
+
+
+  
+
+<section class="carousel-section ">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+    <div class="carousel-item active">
+        <div class="row ">
+        <div class="col-md-6 ">
+        <a href="/allSongs/hiphop_songs">    <img src="images/76ea18c77adfaf743c818fe283a8a776.jpg" class="d-block w-100 border2" alt="..."></a>
+        </div>
+        <div class="col-md-6">
+            <a href="/allSongs/sad_songs">   <img src="images/maxresdefault.jpg" class="d-block w-100 border2" alt="...">
+            </a></div>
+    </div>
+    </div>
+
+    <div class="carousel-item">
+        <div class="row ">
+        <div class="col-md-6 ">
+            <a href="/allSongs/new_english_songs">  <img src="images/BANNER_206771117875970.webp" class="d-block w-100 border2" alt="...">
+            </a></div>
+        <div class="col-md-6 ">
+            <a href="/allSongs/rock_songs">   <img src="images/293506.jpg" class="d-block w-100 border2" alt="...">
+            </a> </div>
+    </div>
+</div>
+    <div class="carousel-item">
+        <div class="row ">
+            <div class="col-md-6 ">
+                <a href="/allSongs/bollywood_songs">    <img src="images/composi-o-de-n-do-t-tulo-bollywood-texto-ilustra-vetor-incandesc-ncia-com-quadro-da-l-mpada-indicador-digital-brilhante-para-145785941.webp" class="d-block w-100 border2" alt="...">
+                </a> </div>
+            <div class="col-md-6 ">
+            <a href="/allSongs/mashup_songs">   <img src="images/maxresdefault (1).jpg" class="d-block w-100 border2" alt="...">
+            </a>  </div>
+        </div>
+    </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+    </a>
+    </div>
+    </section>
+    
+
+   
+<section class="featured-music pt-5 text-light">
+    <div class="container">
+        <h3 class=" mb-4">Hindi Top 14</h3>
+       
+             
+
+<div class=" row songs-container">
+    <% for (let index = 0; index < songs.length; index++) { %>
+        <div class="col-md-4 mb-4 col-sm-6">
+            <div class="card bg-dark-2 card-height">
+                <a href="/song-details?id=<%= songs[index]._id %>"> <img src="<%= songs[index].imageUrl %>" class="card-img-top image-height-2" alt="Music Image"></a>
+                <div class="card-body">
+                    <h5 class="card-title"><%= songs[index].name %></h5>
+                    
+                    <% if (songs[index].artists && songs[index].artists.length > 0) { %>
+                        <p class="card-text">Artist:
+                            <% for (let i = 0; i < songs[index].artists.length; i++) { %>
+                                <%= songs[index].artists[i] %>
+                                <% if (i < songs[index].artists.length - 1) { %>, <% } %>
+                            <% } %>
+                        </p>
+                    <% } else { %>
+                        <p class="card-text">No Artist Found</p>
+                    <% } %>
+                   
+                    <a href="/download/<%= collection %>/<%= songs[index]._id %>" class="btn btn-primary bg-dark">Download Now</a>
+                </div>
+            </div>
+        </div>
+    <% } %>
+</div>
+
+<div class="pagination-container text-center text-light">
+    <div class="pagination">
+        <% if (totalPages > 1) { %>
+            <% for (let i = 1; i <= totalPages; i++) { %>
+                <a href="/?page=<%= i %>" class="pagination-link <%= i === currentPage ? 'active' : '' %>">
+                    <%= i %>
+                </a>
+            <% } %>
+        <% } %>
+    </div>
+</div>
+
+        
+    </div>
+</section>
+
+<section class="carousel-section mt-0">
+    <div class="container">
+        <h3 class="mb-4 text-light">English Songs</h3>
+    </div>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <% for (let i = 0; i < englishSongs.length; i += 6) { %>
+                <div class="carousel-item <%= i === 0 ? 'active' : '' %>">
+                    <div class="row">
+                        <% for (let j = i; j < i + 6 && j < englishSongs.length; j++) { %>
+                            <div class="col-6 col-sm-4 col-md-2 mt-2">
+                                <a href="/song-details?id=<%= englishSongs[j]._id %>">  <img src="<%= englishSongs[j].thumbnail %>" class="d-block w-100 border2 image-height" alt="..."></a>
+                                <a href="/download/<%= collection_name %>/<%= englishSongs[j]._id %>" class="btn btn-primary bg-dark round">Download Now</a>
+                                <% console.log('Song ID:', englishSongs[j]._id); %>
+                            </div>
+                        <% } %>
+                        
+                    </div>
+                </div>
+            <% } %>
+        </div>
+        
+            
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</section>
+
+<!-- Top Artists Section -->
+<section class="top-artists my-5">
+    <div class="container">
+        <h2 class="text-center mb-4 text-light">Top Artists</h2>
+
+        <!-- Switch Button Group -->
+        <div class="text-center mb-3">
+            <div class="btn-group" role="group" aria-label="Language Switch">
+                <button type="button" class="btn  switch-language" data-language="english">English Songs</button>
+                <button type="button" class="btn  switch-language" data-language="hindi">Hindi Songs</button>
+             </div>
+        </div>
+
+        <div class="row" id="artistContainer"> </div>
+        
+             <!-- Hindi Artist Cards -->
+             <div class="row" id="hindi-artists-container">
+                <!-- Hindi Artist Cards will be dynamically added here -->
+            </div>
+            <div class="col-md-12 text-center">
+                <button id="showMoreBtn" class="btn btn-primary">Show More</button>
+            </div>
+            <!-- Add more artist cards as needed -->
+       
+    </div>
+</section>
+
+
+ 

@@ -1,0 +1,21 @@
+
+
+<div class="container pt-5 ">
+    <div class="row">
+        <% songs.forEach(song => { %>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 bg-dark-2">
+                    <a href="/song-details?id=<%= song._id%>">
+                        <img src="<%= song.thumbnail %>" class="card-img-top" alt="<%= song.name %> Thumbnail">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title text-light"><%= song.name %></h5>
+                    </div>
+                    <div class="card-footer">
+                        <a href="/download/<%= collection %>/<%= song._id %>" class="btn btn-primary bg-dark">Download Now</a>
+                    </div>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+</div>
